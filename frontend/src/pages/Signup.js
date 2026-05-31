@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import PageTransition from "../components/PageTransition";
 import Navbar from "../components/Navbar";
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = process.env.REACT_APP_API_BASE_URL || 'https://mentor-connect-backend-7djl.onrender.com/api';
 
 export default function Signup() {
   const { verifyOtp } = useAuth();
